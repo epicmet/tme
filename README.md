@@ -15,13 +15,13 @@ I wrote this app by following [this](https://www.udemy.com/course/javascript-beg
 3. install dependencies using npm.
 
 ```npm
-    npm install
+npm install
 ```
 
 4. link this repo to your local computer using npm so you can access tme everywhere on your terminal.
 
 ```npm
-    npm link
+npm link
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ I wrote this app by following [this](https://www.udemy.com/course/javascript-beg
 The test files that you make should follow this pattern :
 
 ```js
-    *.test.js
+*.test.js
 ```
 
 Inside those test file you can use _it_ and _beforeEach_ function to define you tests.
