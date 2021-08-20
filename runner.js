@@ -6,6 +6,21 @@ class Runner {
     this.testFile = [];
   }
 
+  async runTest() {
+    for (let file of this.testFile) {
+      const beforeEaches = [];
+      global.beforeEach = (fn) => {
+        beforeEaches.push(fn);
+      };
+      global.it = (desc, fn) => {
+        beforeEaches.forEach((func) => func());
+        fn();
+      };
+
+      require(file.name);
+    }
+  }
+
   async collectFiles(targetPath) {
     const files = await fs.promises.readdir(targetPath);
 
